@@ -122,12 +122,45 @@ public class Pizza {
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder("Вы заказали пиццу " + name + ". В этой пиццуньке есть:\n");
-        if (isYeastDough()){
+        if (isYeastDough()) {
             str.append("вкуснейшее тесто\n");
         }
-        if (isCheese()){
+        if (isCheese()) {
             str.append("сырочек\n");
         }
+        if (isMozzarella()) {
+            str.append("Моцарелла\n");
+        }
+        if (isTomatoSauce()) {
+            str.append("томатный соус\n");
+        }
+        if (isSmokedSausages()) {
+            str.append("копчененькие колбаски\n");
+        }
+        if (isHam()) {
+            str.append("ветчина\n");
+        }
+        if (isMushrooms()) {
+            str.append("шампиньончики\n");
+        }
+        if (isBacon()) {
+            str.append("Бекончик\n");
+        }
+        if (isDriedBasil()) {
+            str.append("сушеный басилик\n");
+        }
+        if (isFreshTomatoes()) {
+            str.append("свежие помидорки\n");
+        }
+        if (isPepperoniSausage()) {
+            str.append("колбаска Пепперони\n");
+        }
+        if (isCannedPineapple()) {
+            str.append("ананасик консервированный\n");
+        }
+
+
         return str.toString();
     }
 }
+
