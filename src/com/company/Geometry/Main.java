@@ -23,8 +23,8 @@ public class Main {
 
 
         RightTriangle triangle = new RightTriangle(2, 3);
-        int Pt = triangle.getPt();
-        double St = triangle.getSt();
+        double Pt = triangle.getPerimeter();
+        double St = triangle.getSquare();
         System.out.println(triangle.toString());
     }
 }
