@@ -1,25 +1,40 @@
 package com.company.Geometry;
+
 //Окружность
 public class Circle {
-    int r = 21;
-    double Sc;
-    double Pc;
+    private int radius;
+    private double pi = 3.14;
 
-    public double getSc() {
-        Sc = (r*r) * 3.14;
-        return Sc;
+    public Circle(int radius) {
+        this.radius = radius;
     }
 
-    public void setSc(double sc) {
-        Sc = sc;
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                '}';
     }
 
-    public double getPc() {
-        Pc = 2*3.14*r;
-        return Pc;
+    public int getRadius() {
+        return radius;
     }
 
-    public void setPc(double pc) {
-        Pc = pc;
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public double getSquare() {
+        double square = radius * radius * pi;
+        return square;
+    }
+
+    public double getPerimeter() {
+        return 2 * pi * radius;
+    }
+
+    public void multiplyRadiusOnTwo() {
+        int newRadius = radius * 2;
+        setRadius(newRadius);
     }
 }

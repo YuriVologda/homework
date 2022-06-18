@@ -1,33 +1,47 @@
 package com.company.Geometry;
+
 //Квадрат
 public class Square {
-    int a = 24;
-    int Ps;
-    int Ss;
 
-    public int getA() {
-        return a;
+    private int size;
+
+    public Square(int size) {
+        this.size = size;
     }
 
-    public void setA(int a) {
-        this.a = a;
+    @Override
+    public String toString() {
+        return "Square{" +
+                "a=" + size +
+                '}';
     }
 
-    public int getPs() {
-        Ps = 4*a;
-        return Ps;
+    public int getSize() {
+        return size;
     }
 
-    public void setPs(int ps) {
-        Ps = ps;
+    public void setSize(int size) {
+        this.size = size;
     }
 
-    public int getSs() {
-        Ss = a*a;
-        return Ss;
+    public int getPerimeter() {
+        int perimeter = 4 * size;
+        return perimeter;
     }
 
-    public void setSs(int ss) {
-        Ss = ss;
+    public int getSquare() {
+        int square = size * size;
+        return square;
+    }
+
+    public void multiply(int coefficient) {
+        int newSize = size * coefficient;
+        setSize(newSize);
+    }
+
+    public Square multiplyOnTwo() {
+        int newSize = size * 2;
+        Square square = new Square(newSize);
+        return square;
     }
 }
