@@ -4,6 +4,14 @@ public class Account {
     private long id;
     private Client client;
     private double balance;
+    boolean money;
+
+    public Account(long id, double balance, Client client, boolean money) {
+        this.id = id;
+        this.balance = balance;
+        this.client = client;
+        this.money = money;
+    }
 
     public long getId() {
         return id;
@@ -29,30 +37,35 @@ public class Account {
         this.balance = balance;
     }
 
-    public Account(long id, double balance) {
-        this.id = id;
-        this.balance = balance;
-    }
 
-    public void AddMoney(double addMoney) {
-        double newBalance = balance + addMoney;
-        balance = newBalance;
+    public void addMoney(double amount) {
+        balance = balance + amount;
+        //balance = newBalance;
 
     }
 
-    public void WithdrawMoney(double withdrawMoney) {
-        double newBalance = balance - withdrawMoney;
-        balance = newBalance;
+    /*public void setMoney(){
+
+    }*/
+
+    public void withdrawMoney(double amount) {\
+        if (money) {
+            balance = balance - amount;
+        } else {
+            money = false;
+            System.out.println("Недостаточно средств");
+        }
+        // balance = newBalance;
     }
 
-    public Client returnTheName() {
+    public String returnTheName() {
         String name = client.getName();
-        return client;
+        return name;
     }
 
-    public Client passportDataClient() {
+    public int passportDataClient() {
         int passportDataClient = client.getPassportData();
-        return client;
+        return passportDataClient;
     }
 
 }
