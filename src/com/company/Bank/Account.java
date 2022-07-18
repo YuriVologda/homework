@@ -6,11 +6,10 @@ public class Account {
     private double balance;
     boolean money;
 
-    public Account(long id, double balance, Client client, boolean money) {
+    public Account(long id, double balance, Client client) {
         this.id = id;
         this.balance = balance;
         this.client = client;
-        this.money = money;
     }
 
     public long getId() {
@@ -48,7 +47,7 @@ public class Account {
 
     }*/
 
-    public void withdrawMoney(double amount) {\
+    public void withdrawMoney(double amount) {
         if (money) {
             balance = balance - amount;
         } else {
